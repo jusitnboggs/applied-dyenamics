@@ -147,3 +147,7 @@ idea {
         downloadJavadoc = true
     }
 }
+
+tasks.withType(Jar).configureEach {
+    destinationDirectory.set(file("$rootDir/jar"))
+}
