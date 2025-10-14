@@ -44,35 +44,35 @@ public abstract class MixinAEPartIds {
         var cable_glass = new HashMap<>(CABLE_GLASS);
         for (var color : DyenamicDyeColor.dyenamicValues()) {
             var name = color.getSerializedName().toUpperCase(Locale.ROOT);
-            cable_glass.put(AEColor.valueOf(name), AppDyenamics.INSTANCE.makeId(color.getSerializedName() + "_glass_cable"));
+            cable_glass.put(AEColor.valueOf(name), AppDyenamics.makeId(color.getSerializedName() + "_glass_cable"));
         }
         CABLE_GLASS = ImmutableMap.copyOf(cable_glass);
 
         var cable_covered = new HashMap<>(CABLE_COVERED);
         for (var color : DyenamicDyeColor.dyenamicValues()) {
             var name = color.getSerializedName().toUpperCase(Locale.ROOT);
-            cable_covered.put(AEColor.valueOf(name), AppDyenamics.INSTANCE.makeId(color.getSerializedName() + "_covered_cable"));
+            cable_covered.put(AEColor.valueOf(name), AppDyenamics.makeId(color.getSerializedName() + "_covered_cable"));
         }
         CABLE_COVERED = ImmutableMap.copyOf(cable_covered);
 
         var cable_smart = new HashMap<>(CABLE_SMART);
         for (var color : DyenamicDyeColor.dyenamicValues()) {
             var name = color.getSerializedName().toUpperCase(Locale.ROOT);
-            cable_smart.put(AEColor.valueOf(name), AppDyenamics.INSTANCE.makeId(color.getSerializedName() + "_smart_cable"));
+            cable_smart.put(AEColor.valueOf(name), AppDyenamics.makeId(color.getSerializedName() + "_smart_cable"));
         }
         CABLE_SMART = ImmutableMap.copyOf(cable_smart);
 
         var cable_dense_covered = new HashMap<>(CABLE_DENSE_COVERED);
         for (var color : DyenamicDyeColor.dyenamicValues()) {
             var name = color.getSerializedName().toUpperCase(Locale.ROOT);
-            cable_dense_covered.put(AEColor.valueOf(name), AppDyenamics.INSTANCE.makeId(color.getSerializedName() + "_covered_dense_cable"));
+            cable_dense_covered.put(AEColor.valueOf(name), AppDyenamics.makeId(color.getSerializedName() + "_covered_dense_cable"));
         }
         CABLE_DENSE_COVERED = ImmutableMap.copyOf(cable_dense_covered);
 
         var cable_dense_smart = new HashMap<>(CABLE_DENSE_SMART);
         for (var color : DyenamicDyeColor.dyenamicValues()) {
             var name = color.getSerializedName().toUpperCase(Locale.ROOT);
-            cable_dense_smart.put(AEColor.valueOf(name), AppDyenamics.INSTANCE.makeId(color.getSerializedName() + "_smart_dense_cable"));
+            cable_dense_smart.put(AEColor.valueOf(name), AppDyenamics.makeId(color.getSerializedName() + "_smart_dense_cable"));
         }
         CABLE_DENSE_SMART = ImmutableMap.copyOf(cable_dense_smart);
     }

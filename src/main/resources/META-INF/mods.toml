@@ -1,12 +1,13 @@
-
-modLoader = "kotlinforforge"
+modLoader = "javafml"
 loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+logoFile="appdyenamics.png"
+
 [[mods]]
 modId = "${mod_id}"
 version = "${mod_version}"
 displayName = "${mod_name}"
 displayURL="https://github.com/ko-lja/applied-dyenamics"
-logoFile="appdyenamics_logo.png"
 authors = "${mod_authors}"
 description = '''${mod_description}'''
 
@@ -14,27 +15,29 @@ description = '''${mod_description}'''
 config = "${mod_id}.mixins.json"
 
 [[dependencies."${mod_id}"]]
-modId = "neoforge"
-type = "required"
-versionRange = "${neo_version_range}"
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies."${mod_id}"]]
 modId = "minecraft"
-type = "required"
+mandatory = true
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies."${mod_id}"]]
 modId = "ae2"
-type = "required"
+mandatory = true
+versionRange = "[${ae2_version},)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies."${mod_id}"]]
 modId = "dyenamics"
-type = "required"
+mandatory = true
+versionRange = "[${dyenamics_version},)"
 ordering = "NONE"
 side = "BOTH"
