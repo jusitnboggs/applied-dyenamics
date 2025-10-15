@@ -96,6 +96,9 @@ dependencies {
     modImplementation "curse.maven:guideme-1173950:7013686"
     modImplementation "curse.maven:dyenamics-509276:5353528"
 
+    modImplementation "curse.maven:ex-pattern-provider-892005:7064210"
+    modImplementation "curse.maven:glodium-957920:5226922"
+
     compileOnly "org.jetbrains:annotations:26.0.2-1"
 
     // Utility mods
