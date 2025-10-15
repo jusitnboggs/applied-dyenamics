@@ -8,16 +8,6 @@ plugins {
 version = mod_version
 group = mod_group_id
 
-repositories {
-    mavenLocal()
-    maven {
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-
 base {
     archivesName = mod_id
 }
@@ -75,16 +65,45 @@ neoForge {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
+repositories {
+    mavenLocal()
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        // Shedaniel's maven (Architectury API)
+        url = "https://maven.architectury.dev"
+        content {
+            includeGroup "dev.architectury"
+        }
+    }
+    maven {
+        // saps.dev Maven (KubeJS and Rhino)
+        url = "https://maven.saps.dev/minecraft"
+        content {
+            includeGroup "dev.latvian.mods"
+        }
+    }
+}
+
 dependencies {
     implementation "org.appliedenergistics:appliedenergistics2:$ae2_version"
     implementation "curse.maven:guideme-1173950:6488254"
 
     implementation "curse.maven:dyenamics-509276:6620953"
 
+    implementation "curse.maven:ex-pattern-provider-892005:7064432"
+
     // Utility mods
     implementation "curse.maven:worldedit-225608:5830452"
     implementation "curse.maven:tags-viewer-1119728:5807896"
     implementation "curse.maven:jei-238222:7057366"
+
+    // KubeJS Support
+    implementation("dev.latvian.mods:kubejs-neoforge:2101.7.2-build.278") { transitive = false }
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

@@ -1,0 +1,327 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_off"
+      },
+      "when": {
+        "connected": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_white"
+      },
+      "when": {
+        "connected": "true",
+        "color": "0"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_light_gray"
+      },
+      "when": {
+        "connected": "true",
+        "color": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_gray"
+      },
+      "when": {
+        "connected": "true",
+        "color": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_black"
+      },
+      "when": {
+        "connected": "true",
+        "color": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_lime"
+      },
+      "when": {
+        "connected": "true",
+        "color": "4"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_yellow"
+      },
+      "when": {
+        "connected": "true",
+        "color": "5"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_orange"
+      },
+      "when": {
+        "connected": "true",
+        "color": "6"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_brown"
+      },
+      "when": {
+        "connected": "true",
+        "color": "7"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_red"
+      },
+      "when": {
+        "connected": "true",
+        "color": "8"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_pink"
+      },
+      "when": {
+        "connected": "true",
+        "color": "9"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_magenta"
+      },
+      "when": {
+        "connected": "true",
+        "color": "10"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_purple"
+      },
+      "when": {
+        "connected": "true",
+        "color": "11"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_blue"
+      },
+      "when": {
+        "connected": "true",
+        "color": "12"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_light_blue"
+      },
+      "when": {
+        "connected": "true",
+        "color": "13"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_cyan"
+      },
+      "when": {
+        "connected": "true",
+        "color": "14"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_green"
+      },
+      "when": {
+        "connected": "true",
+        "color": "15"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_fluix"
+      },
+      "when": {
+        "connected": "true",
+        "color": "16"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_peach"
+      },
+      "when": {
+        "connected": "true",
+        "color": "17"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_aquamarine"
+      },
+      "when": {
+        "connected": "true",
+        "color": "18"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_fluorescent"
+      },
+      "when": {
+        "connected": "true",
+        "color": "19"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_mint"
+      },
+      "when": {
+        "connected": "true",
+        "color": "20"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_maroon"
+      },
+      "when": {
+        "connected": "true",
+        "color": "21"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_bubblegum"
+      },
+      "when": {
+        "connected": "true",
+        "color": "22"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_lavender"
+      },
+      "when": {
+        "connected": "true",
+        "color": "23"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_persimmon"
+      },
+      "when": {
+        "connected": "true",
+        "color": "24"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_cherenkov"
+      },
+      "when": {
+        "connected": "true",
+        "color": "25"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_amber"
+      },
+      "when": {
+        "connected": "true",
+        "color": "26"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_honey"
+      },
+      "when": {
+        "connected": "true",
+        "color": "27"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_ultramarine"
+      },
+      "when": {
+        "connected": "true",
+        "color": "28"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_spring_green"
+      },
+      "when": {
+        "connected": "true",
+        "color": "29"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_rose"
+      },
+      "when": {
+        "connected": "true",
+        "color": "30"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_navy"
+      },
+      "when": {
+        "connected": "true",
+        "color": "31"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_icy_blue"
+      },
+      "when": {
+        "connected": "true",
+        "color": "32"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_wine"
+      },
+      "when": {
+        "connected": "true",
+        "color": "33"
+      }
+    },
+    {
+      "apply": {
+        "model": "extendedae:block/wireless_hub_conifer"
+      },
+      "when": {
+        "connected": "true",
+        "color": "34"
+      }
+    }
+  ]
+}
