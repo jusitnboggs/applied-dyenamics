@@ -3,7 +3,6 @@ plugins {
     id 'maven-publish'
     id 'idea'
     id 'net.neoforged.moddev' version '2.0.115'
-    id 'org.jetbrains.kotlin.jvm' version '2.0.0'
 }
 
 version = mod_version
@@ -11,11 +10,6 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
-    maven {
-        name = 'Kotlin for Forge'
-        url = 'https://thedarkcolour.github.io/KotlinForForge/'
-        content { includeGroup "thedarkcolour" }
-    }
     maven {
         url "https://cursemaven.com"
         content {
@@ -29,7 +23,6 @@ base {
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
-kotlin.jvmToolchain(21)
 
 neoForge {
     // Specify the version of NeoForge to use.
@@ -40,16 +33,10 @@ neoForge {
         minecraftVersion = project.parchment_minecraft_version
     }
 
-    // This line is optional. Access Transformers are automatically detected
-    // accessTransformers.add('src/main/resources/META-INF/accesstransformer.cfg')
-
-    // Default run configurations.
-    // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
             client()
 
-            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
@@ -59,9 +46,6 @@ neoForge {
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
-        // This run config launches GameTestServer and runs all registered gametests, then exits.
-        // By default, the server will crash when no gametests are provided.
-        // The gametest system is also enabled by default for other run configs under the /test command.
         gameTestServer {
             type = "gameTestServer"
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
@@ -74,7 +58,6 @@ neoForge {
             programArguments.addAll '--existing-mod', 'ae2'
         }
 
-        // applies to all the run configs above
         configureEach {
             jvmArgument "-XX:+AllowEnhancedClassRedefinition"
 
@@ -92,10 +75,7 @@ neoForge {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-
 dependencies {
-    implementation 'thedarkcolour:kotlinforforge-neoforge:5.3.0'
-
     implementation "org.appliedenergistics:appliedenergistics2:$ae2_version"
     implementation "curse.maven:guideme-1173950:6488254"
 
@@ -118,7 +98,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
                              mod_license            : mod_license,
                              mod_version            : mod_version,
                              mod_authors            : mod_authors,
-                             mod_description        : mod_description]
+                             mod_description        : mod_description,
+                             ae2_version            : ae2_version,]
     inputs.properties replaceProperties
     expand replaceProperties
     from "src/main/templates"
@@ -127,19 +108,6 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
 
 sourceSets.main.resources.srcDir generateModMetadata
 neoForge.ideSyncTask generateModMetadata
-
-publishing {
-    publications {
-        register('mavenJava', MavenPublication) {
-            from components.java
-        }
-    }
-    repositories {
-        maven {
-            url "file://${project.projectDir}/repo"
-        }
-    }
-}
 
 idea {
     module {

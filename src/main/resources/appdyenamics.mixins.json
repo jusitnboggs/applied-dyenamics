@@ -4,8 +4,10 @@
   "package": "lu.kolja.appdyenamics.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AccessorCableBusBlock",
     "MixinAEColor",
-    "MixinAEPartIds"
+    "MixinAEPartIds",
+    "MixinColorApplicatorItem"
   ],
   "client": [
   ],
