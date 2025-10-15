@@ -96,6 +96,7 @@ dependencies {
     implementation "curse.maven:dyenamics-509276:6620953"
 
     implementation "curse.maven:ex-pattern-provider-892005:7064432"
+    implementation "curse.maven:glodium-957920:5821676"
 
     // Utility mods
     implementation "curse.maven:worldedit-225608:5830452"
@@ -103,7 +104,7 @@ dependencies {
     implementation "curse.maven:jei-238222:7057366"
 
     // KubeJS Support
-    implementation("dev.latvian.mods:kubejs-neoforge:2101.7.2-build.278") { transitive = false }
+    //implementation("dev.latvian.mods:kubejs-neoforge:2101.7.2-build.278") { transitive = false }
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
