@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "lu.kolja.appdyenamics.mixin",
+  "plugin": "lu.kolja.appdyenamics.mixin.AppDyenamicsMixinPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.expandedae.refmap.json",
+  "mixins": [
+    "AccessorCableBusBlock",
+    "MixinAEColor",
+    "MixinAEPartIds",
+    "MixinColorApplicatorItem",
+    "compat.eae.MixinBlockWirelessConnector",
+    "compat.eae.MixinBlockWirelessHub"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
